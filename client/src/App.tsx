@@ -1,32 +1,10 @@
-import './App.css'
+import { RouterProvider } from "react-router-dom";
+import { Routes } from "./routes/Routes";
 
-function App() {
-  let name: string = "Ramon D. Bulan IV";
-  let age: number = 20;
-  let score1: number = 85;
-  let score2: number = 90;
+const App = () => {
 
-  let totalScore: number = score1 + score2;
+  return <RouterProvider router={Routes} />;
 
-  let average: number = totalScore/2
-  return (
-    <> {/* FRAGMENT*/}
-      <h1>Student Information</h1>
+};
 
-      <p>Name: {name}</p>
-      <p>Age: {age}</p>
-
-      <h2>Scores</h2>
-      <p>Score 1: {score1}</p>
-      <p>Score 2: {score2}</p>
-
-      <h3>Total Score: {totalScore}</h3>
-      <h3>Average Score: {average}</h3>
-
-    </>
-  )
-   
-
-}
-
-export default App
+export default App;
